@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EsewaTask</string>
+    <string name="app_name">Dashboard</string>
     <string name="list_of_names">List of Names</string>
     <string name="name">Name:</string>
     <string name="nameOutput">Rubin Shrestha</string>
@@ -9,4 +9,6 @@
     <string name="sexOutput">Male</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txvFree">Free Users</string>
+    <string name="txvPremium">Premium Users</string>
 </resources>

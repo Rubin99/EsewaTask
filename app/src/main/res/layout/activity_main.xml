@@ -5,94 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:weightSum="4">
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/lnlNames"
-        android:layout_weight="3.25"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#5fb648"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/list_of_names"
-            android:textSize="32sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="8dp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvNames"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight=".75"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:gravity="center">
-
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sort By"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:layout_gravity="center_horizontal"/>
+        android:background="#F3F4F8">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnSortByAge"
-            android:layout_width="95dp"
-            android:layout_height="50dp"
-            android:text="Age"
-            android:textColor="@color/white"
-            android:layout_marginEnd="4dp"
-            android:backgroundTint="#5fb648"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                app:cardElevation="3dp">
 
-        <Button
-            android:id="@+id/btnSortByMale"
-            android:layout_width="95dp"
-            android:layout_height="50dp"
-            android:text="MALE"
-            android:textColor="@color/white"
-            android:layout_marginEnd="4dp"
-            android:backgroundTint="#5fb648"/>
 
-        <Button
-            android:id="@+id/btnSortByFemale"
-            android:layout_width="95dp"
-            android:layout_height="50dp"
-            android:text="FeMALE"
-            android:textColor="@color/white"
-            android:layout_marginEnd="4dp"
-            android:backgroundTint="#5fb648"/>
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:tabIndicatorColor="@color/tabSelected"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/white"
+                        app:tabTextAppearance="@style/tabText"
+                        app:tabTextColor="#474747" />
 
-        <Button
-            android:id="@+id/btnSortByReset"
-            android:layout_width="95dp"
-            android:layout_height="50dp"
-            android:text="Reset"
-            android:textColor="@color/white"
-            android:backgroundTint="#5fb648"/>
+            </androidx.cardview.widget.CardView>
 
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
         </LinearLayout>
 
     </LinearLayout>
+
+
 
 </LinearLayout>
