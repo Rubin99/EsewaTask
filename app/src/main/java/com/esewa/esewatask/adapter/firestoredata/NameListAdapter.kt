@@ -1,10 +1,11 @@
-package com.esewa.esewatask.adapter
+package com.esewa.esewatask.adapter.firestoredata
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.esewa.esewatask.R
+import com.esewa.esewatask.shared.NameData
 
 /**
  * Created by Rubin on 9/9/2022

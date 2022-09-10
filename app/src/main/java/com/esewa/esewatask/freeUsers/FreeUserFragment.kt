@@ -2,8 +2,6 @@ package com.esewa.esewatask.freeUsers
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,9 +11,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.esewa.esewatask.R
-import com.esewa.esewatask.adapter.NameData
-import com.esewa.esewatask.adapter.NameListAdapter
-import com.esewa.esewatask.shared.remoteConfigResponse.UserList
+import com.esewa.esewatask.shared.NameData
+import com.esewa.esewatask.adapter.firestoredata.NameListAdapter
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.firestore.*
 import com.google.firebase.firestore.ktx.firestore
@@ -23,14 +20,14 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.hannesdorfmann.mosby3.mvp.MvpFragment
+import java.util.*
+import kotlin.Comparator
+import kotlin.collections.ArrayList
 
 class FreeUserFragment : MvpFragment<FreeUserView, FreeUserPresenter>(), FreeUserView {
 
     private lateinit var nameDataList: MutableList<NameData>
-    private lateinit var maleDataList: MutableList<NameData>
     var nameListAdapter: NameListAdapter? = null
     var btnSortByAge: Button? = null
     var btnSortByMale: Button? = null
@@ -39,6 +36,7 @@ class FreeUserFragment : MvpFragment<FreeUserView, FreeUserPresenter>(), FreeUse
     var lnlNames: LinearLayout? = null
     private var fbAnalytics: FirebaseAnalytics? = null
     lateinit var remoteConfig: FirebaseRemoteConfig
+    var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,7 +76,6 @@ class FreeUserFragment : MvpFragment<FreeUserView, FreeUserPresenter>(), FreeUse
         btnSortByReset = view.findViewById(R.id.btnSortByReset)
         lnlNames = view.findViewById(R.id.lnlNames)
         nameDataList = ArrayList()
-        maleDataList = ArrayList()
         val rcvName: RecyclerView = view.findViewById(R.id.rcvNames)
         rcvName.layoutManager = LinearLayoutManager(requireContext())
         nameListAdapter = NameListAdapter(requireContext(), nameDataList)
@@ -97,7 +94,7 @@ class FreeUserFragment : MvpFragment<FreeUserView, FreeUserPresenter>(), FreeUse
         })
 
         btnSortByAge?.setOnClickListener(View.OnClickListener {
-            nameDataList.reverse()
+            sortByAge()
             var bundle: Bundle = Bundle()
             bundle.putString("age", "Sort by Age")
             fbAnalytics?.logEvent("btnSortByAge", bundle)
@@ -114,6 +111,19 @@ class FreeUserFragment : MvpFragment<FreeUserView, FreeUserPresenter>(), FreeUse
             resetList()
             presenter.fetchRemoteConfigData(remoteConfig, requireActivity())
         })
+    }
+
+    private fun sortByAge() {
+        if (count % 2 == 0){
+            Collections.sort(nameDataList,
+                Comparator<NameData> { o1, o2 -> o1.age!!.compareTo(o2.age!!) })
+            count++
+        } else{
+            Collections.sort(nameDataList,
+                Comparator<NameData> { o1, o2 -> o2.age!!.compareTo(o1.age!!) })
+            count++
+        }
+        nameListAdapter?.notifyDataSetChanged()
     }
 
     private fun resetList() {

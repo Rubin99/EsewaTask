@@ -1,4 +1,4 @@
-package com.esewa.esewatask.adapter
+package com.esewa.esewatask.shared
 
 /**
 * Created by Rubin on 9/9/2022
