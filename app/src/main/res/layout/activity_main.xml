@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/lnlNames"
+        android:layout_weight="3.25"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#5fb648"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/list_of_names"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight=".75"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <Button
+            android:id="@+id/btnSortByAge"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:text="Age"
+            android:textColor="@color/white"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#5fb648"/>
+
+        <Button
+            android:id="@+id/btnSortByMale"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:text="MALE"
+            android:textColor="@color/white"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#5fb648"/>
+
+        <Button
+            android:id="@+id/btnSortByFemale"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:text="FeMALE"
+            android:textColor="@color/white"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#5fb648"/>
+
+        <Button
+            android:id="@+id/btnSortByReset"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:backgroundTint="#5fb648"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "781438354999",
+    "project_id": "esewatask",
+    "storage_bucket": "esewatask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781438354999:android:27cfe0f5bde2917c0ee1b2",
+        "android_client_info": {
+          "package_name": "com.esewa.esewatask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781438354999-ggm56obl7jmlkiiacs9d2jp08s1mqt5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMD12A2th1oBGlNq9W3rrjyPVzFIKrtYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781438354999-ggm56obl7jmlkiiacs9d2jp08s1mqt5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

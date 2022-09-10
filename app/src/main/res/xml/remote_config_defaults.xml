@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>userList</key>
+    <value>[   {     "name": "Wayne Rooney",     "age": 36,     "sex": "Male"   },   {     "name": "Cristiano Ronaldo",     "age": 38,     "sex": "Male"   },   {     "name": "Angelina Jolie",     "age": 36,     "sex": "Male"   },   {     "name": "Wayne Rooney",     "age": 36,     "sex": "Male"   },   {     "name": "Wayne Rooney",     "age": 36,     "sex": "Male"   },   {     "name": "Wayne Rooney",     "age": 36,     "sex": "Male"   } ]</value>
+  </entry>
+  <entry>
+    <key>btnAgeEnable</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>btnFemaleText</key>
+    <value>Female</value>
+  </entry>
+  <entry>
+    <key>lnlNamesColor</key>
+    <value>#5fb648</value>
+  </entry>
+</defaults>
