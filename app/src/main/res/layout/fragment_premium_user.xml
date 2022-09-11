@@ -39,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:background="#F3F4F8"
         android:gravity="center">
 
         <TextView
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="Sort By"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="#474747"
             android:layout_gravity="center_horizontal"/>
 
         <LinearLayout

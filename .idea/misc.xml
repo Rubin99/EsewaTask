@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/EsewaTask/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.25833333333333336" />
         <entry key="..\:/AndroidStudioProjects/EsewaTask/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/AndroidStudioProjects/EsewaTask/app/src/main/res/layout/fragment_free_user.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/EsewaTask/app/src/main/res/layout/fragment_premium_user.xml" value="0.181640625" />
         <entry key="..\:/AndroidStudioProjects/EsewaTask/app/src/main/res/layout/names_item.xml" value="0.44129554655870445" />
+        <entry key="..\:/AndroidStudioProjects/EsewaTask/app/src/main/res/layout/nav_tab.xml" value="0.1" />
       </map>
     </option>
   </component>
