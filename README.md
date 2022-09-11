@@ -9,19 +9,19 @@ Also as mentioned before, remote config is also used to display data in the seco
 
 Firebase Analytics is used to track the events of the sorting button clicks aside from its automatic and default events  
 
-![Dashboard](./dashboard.jpg)
+![Dashboard](dashboard.jpg)
 
 #### Firestore:
 
-![Firestore](./firestore.jpg)
+![Firestore](firestore.jpg)
 
 #### Remote Config: 
 
-![RemoteConfig](./remoteConfig.jpg)
+![RemoteConfig](remoteConfig.jpg)
 
 #### Analytics:
 
-![Analytics](./firebaseAnalytics.jpg)
+![Analytics](firebaseAnalytics.jpg)
 
 
 
